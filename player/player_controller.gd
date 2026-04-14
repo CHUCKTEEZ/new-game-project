@@ -1,7 +1,10 @@
 extends CharacterBody3D
 
-## Walk speed on the ground (m/s).
-@export var move_speed: float = 6.0
+@export_group("Movement")
+## Ground walk speed (m/s). Adjust on the Player node in the Inspector under **Movement**.
+@export_range(0.5, 40.0, 0.1, "or_greater") var move_speed: float = 6.0
+
+@export_group("Camera")
 ## Mouse sensitivity for third-person orbit (radians per pixel).
 @export var mouse_sensitivity: float = 0.003
 @export var min_pitch_deg: float = -55.0

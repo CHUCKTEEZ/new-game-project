@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://add ons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" path="res://player/player.tscn" id="1_player"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,6 +26,7 @@ environment = SubResource("Environment_0xm2m")
 
 [node name="Plain" type="CSGBox3D" parent="." unique_id=102944490]
 transform = Transform3D(14.5, 0, 0, 0, 0.099999964, 0, 0, 0, 13.1, 0, 0, 0)
+use_collision = true
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Plain" unique_id=357771509]
 transform = Transform3D(0.024354119, 0, 0, 0, 10.000005, 0, 0, 0, 0.02328959, 0.09227555, 1.7285165, -0.27136883)
@@ -100,6 +101,5 @@ height = 2.3457031
 transform = Transform3D(-0.40777627, 0, -6.470285e-07, 0, 0.9073796, 0, 4.1262346e-08, 0, -8.566553, -7.470225, 0.3271484, -6.0475473)
 use_collision = true
 
-[node name="ProtoController" parent="." unique_id=1814092889 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(0.6, 0, 0, 0, 0.42000002, 0, 0, 0, 0.9, -2.8000002, 0, 4.2999997)
-script = null
+[node name="Player" parent="." instance=ExtResource("1_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0.1, 4.3)
